@@ -1,5 +1,5 @@
 //
-//  CardMatchingGame.m
+//  TwoCardMatchingGame.m
 //  Matchismo
 //
 //  Created by ccoria on 24/04/13.
