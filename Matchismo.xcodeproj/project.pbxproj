@@ -22,8 +22,8 @@
 		723410FB1726345B00D66B8B /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 723410FA1726345B00D66B8B /* Deck.m */; };
 		723410FE172653EC00D66B8B /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 723410FD172653EC00D66B8B /* PlayingCard.m */; };
 		7234110117265DCE00D66B8B /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 7234110017265DCE00D66B8B /* PlayingCardDeck.m */; };
+		72547823176EB1DF000CAF91 /* beatleslogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 72547822176EB1DF000CAF91 /* beatleslogo.png */; };
 		72BB533117285A6E00ED3D8F /* TwoCardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB533017285A6E00ED3D8F /* TwoCardMatchingGame.m */; };
-		72D00547175C61AF0045652C /* back_base.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 72D00546175C61AF0045652C /* back_base.jpeg */; };
 		72E27AE8175C408D0077334C /* ThreeCardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E27AE7175C408D0077334C /* ThreeCardMatchingGame.m */; };
 		72E27AEB175C40CE0077334C /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E27AEA175C40CE0077334C /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
@@ -53,9 +53,9 @@
 		723410FD172653EC00D66B8B /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 		723410FF17265DCE00D66B8B /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		7234110017265DCE00D66B8B /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		72547822176EB1DF000CAF91 /* beatleslogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beatleslogo.png; sourceTree = "<group>"; };
 		72BB532F17285A6E00ED3D8F /* TwoCardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwoCardMatchingGame.h; path = Model/TwoCardMatchingGame.h; sourceTree = "<group>"; };
 		72BB533017285A6E00ED3D8F /* TwoCardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwoCardMatchingGame.m; path = Model/TwoCardMatchingGame.m; sourceTree = "<group>"; };
-		72D00546175C61AF0045652C /* back_base.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back_base.jpeg; sourceTree = "<group>"; };
 		72E27AE6175C408D0077334C /* ThreeCardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeCardMatchingGame.h; sourceTree = "<group>"; };
 		72E27AE7175C408D0077334C /* ThreeCardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeCardMatchingGame.m; sourceTree = "<group>"; };
 		72E27AE9175C40CE0077334C /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
@@ -106,7 +106,6 @@
 		723410D91726293900D66B8B /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
-				72D00546175C61AF0045652C /* back_base.jpeg */,
 				723410EB1726293900D66B8B /* MainStoryboard.storyboard */,
 				723410EE1726293900D66B8B /* CardGameViewController.h */,
 				723410EF1726293900D66B8B /* CardGameViewController.m */,
@@ -119,6 +118,7 @@
 		723410DA1726293900D66B8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				72547822176EB1DF000CAF91 /* beatleslogo.png */,
 				723410E21726293900D66B8B /* CardGameAppDelegate.h */,
 				723410E31726293900D66B8B /* CardGameAppDelegate.m */,
 				723410DB1726293900D66B8B /* Matchismo-Info.plist */,
@@ -210,7 +210,7 @@
 				723410E81726293900D66B8B /* Default@2x.png in Resources */,
 				723410EA1726293900D66B8B /* Default-568h@2x.png in Resources */,
 				723410ED1726293900D66B8B /* MainStoryboard.storyboard in Resources */,
-				72D00547175C61AF0045652C /* back_base.jpeg in Resources */,
+				72547823176EB1DF000CAF91 /* beatleslogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

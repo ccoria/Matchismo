@@ -10,6 +10,7 @@
 #import "PlayingCardDeck.h"
 #import "TwoCardMatchingGame.h"
 #import "ThreeCardMatchingGame.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -23,10 +24,10 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameModeSwitcher;
 @property (nonatomic) BOOL isThreeCardGame;
 @property (nonatomic) BOOL enableGameSwitcher;
+@property (nonatomic) UIImage *beatlesLogo;
 @end
 
 @implementation CardGameViewController
-
 
 - (CardMatchingGame *)game
 {
@@ -46,7 +47,10 @@
 
 - (void)setCardButtons:(NSArray *)cardButtons
 {
+    self.beatlesLogo = [UIImage imageNamed:@"beatleslogo.png"];
+    
     _cardButtons = cardButtons;
+    
     [self updateUI];
 }
 
@@ -57,8 +61,18 @@
         Card *currentCard = [self.game cardAtIndex:currentIndex];
         
         NSString *cardContents = [currentCard contents];
+        
+        // The set image property was not respecting the states
+        [cardButton setBackgroundImage:nil forState:UIControlStateNormal];
+        if (!currentCard.isFaceUp) {
+            [cardButton setBackgroundImage:self.beatlesLogo forState:UIControlStateNormal];
+            cardButton.layer.cornerRadius = 10;
+            cardButton.clipsToBounds = YES;
+        }
+        
         [cardButton setTitle:cardContents forState:UIControlStateSelected];
         [cardButton setTitle:cardContents forState:UIControlStateSelected|UIControlStateDisabled];
+        
         cardButton.selected = currentCard.isFaceUp;
         cardButton.enabled = !currentCard.isUnplayable;
         
@@ -77,6 +91,7 @@
     [self.game flipCardAtIndex:cardIndex];
     
     [self updateUI];
+    //NSLog(@"Changed: %d", sender.state);
     
     self.flipCount++;
 }
