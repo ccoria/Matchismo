@@ -47,9 +47,19 @@
 
 - (void)setCardButtons:(NSArray *)cardButtons
 {
-    self.beatlesLogo = [UIImage imageNamed:@"beatleslogo.png"];
-    
     _cardButtons = cardButtons;
+    
+    self.beatlesLogo = [UIImage imageNamed:@"beatleslogo.png"];
+//    for (UIButton *cardButton in cardButtons) {
+//        // The set image property was not respecting the states
+//        [cardButton setBackgroundImage:nil forState:UIControlStateSelected];
+//        [cardButton setBackgroundImage:nil forState:UIControlStateSelected|UIControlStateHighlighted];
+//        [cardButton setBackgroundImage:nil forState:UIControlStateDisabled];
+//        [cardButton setBackgroundImage:nil forState:UIControlStateSelected|UIControlStateDisabled];
+//        [cardButton setBackgroundImage:self.beatlesLogo forState:UIControlStateNormal];
+//        cardButton.layer.cornerRadius = 10;
+//        cardButton.clipsToBounds = YES;
+//    }
     
     [self updateUI];
 }
