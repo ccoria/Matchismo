@@ -49,18 +49,10 @@
 {
     _cardButtons = cardButtons;
     
-    self.beatlesLogo = [UIImage imageNamed:@"beatleslogo.png"];
-//    for (UIButton *cardButton in cardButtons) {
-//        // The set image property was not respecting the states
-//        [cardButton setBackgroundImage:nil forState:UIControlStateSelected];
-//        [cardButton setBackgroundImage:nil forState:UIControlStateSelected|UIControlStateHighlighted];
-//        [cardButton setBackgroundImage:nil forState:UIControlStateDisabled];
-//        [cardButton setBackgroundImage:nil forState:UIControlStateSelected|UIControlStateDisabled];
-//        [cardButton setBackgroundImage:self.beatlesLogo forState:UIControlStateNormal];
-//        cardButton.layer.cornerRadius = 10;
-//        cardButton.clipsToBounds = YES;
-//    }
-    
+    UIImage *beatlesImage = [UIImage imageNamed:@"the_beatles_logo_black.jpg"];
+    //UIEdgeInsets insets = UIEdgeInsetsMake(15, 5, 15, 5);
+    //self.beatlesLogo = [beatlesImage resizableImageWithCapInsets:insets];
+    self.beatlesLogo = beatlesImage;
     [self updateUI];
 }
 
@@ -76,7 +68,7 @@
         [cardButton setBackgroundImage:nil forState:UIControlStateNormal];
         if (!currentCard.isFaceUp) {
             [cardButton setBackgroundImage:self.beatlesLogo forState:UIControlStateNormal];
-            cardButton.layer.cornerRadius = 10;
+            cardButton.layer.cornerRadius = 8;
             cardButton.clipsToBounds = YES;
         }
         
@@ -87,6 +79,9 @@
         cardButton.enabled = !currentCard.isUnplayable;
         
         cardButton.alpha = currentCard.isUnplayable ? 0.3 : 1.0;
+        
+        cardButton.layer.borderWidth=1.0f;
+        [cardButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
         
         [self setScoreCount:self.game.score];
         self.statusLabel.text = self.game.status;

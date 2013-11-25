@@ -23,6 +23,7 @@
 		723410FE172653EC00D66B8B /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 723410FD172653EC00D66B8B /* PlayingCard.m */; };
 		7234110117265DCE00D66B8B /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 7234110017265DCE00D66B8B /* PlayingCardDeck.m */; };
 		72547823176EB1DF000CAF91 /* beatleslogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 72547822176EB1DF000CAF91 /* beatleslogo.png */; };
+		7268AC30183092350062DA7F /* the_beatles_logo_black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7268AC2F183092350062DA7F /* the_beatles_logo_black.jpg */; };
 		72BB533117285A6E00ED3D8F /* TwoCardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB533017285A6E00ED3D8F /* TwoCardMatchingGame.m */; };
 		72E27AE8175C408D0077334C /* ThreeCardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E27AE7175C408D0077334C /* ThreeCardMatchingGame.m */; };
 		72E27AEB175C40CE0077334C /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E27AEA175C40CE0077334C /* CardMatchingGame.m */; };
@@ -54,6 +55,7 @@
 		723410FF17265DCE00D66B8B /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		7234110017265DCE00D66B8B /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
 		72547822176EB1DF000CAF91 /* beatleslogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beatleslogo.png; sourceTree = "<group>"; };
+		7268AC2F183092350062DA7F /* the_beatles_logo_black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_beatles_logo_black.jpg; sourceTree = "<group>"; };
 		72BB532F17285A6E00ED3D8F /* TwoCardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwoCardMatchingGame.h; path = Model/TwoCardMatchingGame.h; sourceTree = "<group>"; };
 		72BB533017285A6E00ED3D8F /* TwoCardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwoCardMatchingGame.m; path = Model/TwoCardMatchingGame.m; sourceTree = "<group>"; };
 		72E27AE6175C408D0077334C /* ThreeCardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeCardMatchingGame.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		723410DA1726293900D66B8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7268AC2F183092350062DA7F /* the_beatles_logo_black.jpg */,
 				72547822176EB1DF000CAF91 /* beatleslogo.png */,
 				723410E21726293900D66B8B /* CardGameAppDelegate.h */,
 				723410E31726293900D66B8B /* CardGameAppDelegate.m */,
@@ -209,6 +212,7 @@
 				723410E61726293900D66B8B /* Default.png in Resources */,
 				723410E81726293900D66B8B /* Default@2x.png in Resources */,
 				723410EA1726293900D66B8B /* Default-568h@2x.png in Resources */,
+				7268AC30183092350062DA7F /* the_beatles_logo_black.jpg in Resources */,
 				723410ED1726293900D66B8B /* MainStoryboard.storyboard in Resources */,
 				72547823176EB1DF000CAF91 /* beatleslogo.png in Resources */,
 			);
@@ -318,6 +322,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "Matchismo/Matchismo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -329,6 +334,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "Matchismo/Matchismo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
