@@ -7,7 +7,6 @@
 //
 
 #import "CardGameViewController.h"
-#import "PlayingCardDeck.h"
 #import "TwoCardMatchingGame.h"
 #import "ThreeCardMatchingGame.h"
 #import <QuartzCore/QuartzCore.h>
@@ -32,16 +31,21 @@
 - (CardMatchingGame *)game
 {
     if (!_game){
-        if (self.isThreeCardGame){
-            _game = [[ThreeCardMatchingGame alloc] initWithCardCount:self.cardButtons.count
-                                                         usingDeck:[[PlayingCardDeck alloc] init]];
-        } else {
-            _game = [[TwoCardMatchingGame alloc] initWithCardCount:self.cardButtons.count
-                                                         usingDeck:[[PlayingCardDeck alloc] init]];
-        }
+        CardMatchingGame *cardGame = self.isThreeCardGame ?
+        [ThreeCardMatchingGame alloc] : [TwoCardMatchingGame alloc];
+        
+        _game = [cardGame initWithCardCount:self.cardButtons.count
+                                  usingDeck:[self createDeck]];
     }
     
     return _game;
+}
+
+
+
+- (Deck *)createDeck
+{
+    return nil; // implemented in PlayingCardViewController;
 }
 
 
@@ -50,8 +54,6 @@
     _cardButtons = cardButtons;
     
     UIImage *beatlesImage = [UIImage imageNamed:@"the_beatles_logo_black.jpg"];
-    //UIEdgeInsets insets = UIEdgeInsetsMake(15, 5, 15, 5);
-    //self.beatlesLogo = [beatlesImage resizableImageWithCapInsets:insets];
     self.beatlesLogo = beatlesImage;
     [self updateUI];
 }
